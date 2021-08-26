@@ -28,3 +28,4 @@ Route::get('/profile.html', 'App\Http\Controllers\UserController@profile');
 Route::post('/profile.html', 'App\Http\Controllers\CarsController@store');
 Route::get('/profile.html/{id}', 'App\Http\Controllers\UserController@profileid');
 Route::get('/addbook.html/{id}', 'App\Http\Controllers\UserController@addbook');
+Route::get('/feed.html/bookadded/{userid}', 'App\Http\Controllers\CarsController@store');

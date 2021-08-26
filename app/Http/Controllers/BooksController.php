@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\book;
 
-class CarsController extends Controller
+class BooksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -33,8 +33,9 @@ class CarsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $userid)
     {
+        error_log('accessed store');
         //
         $request->validate([
             'title' => 'required|unique:books,title',
@@ -47,14 +48,15 @@ class CarsController extends Controller
         $book->title = request('title');
         $book->genre = request('genre');
         $book->description = request('description');
-        
+        $book->added_by = $userid;
+
         $newBookName = $request->title . $request->image->extension();
         $request->image->move(public_path('books'), $newBookName);
         $book->image_path = $newBookName;
-        
+
         $book->save();
 
-        return redirect('/profile.html');
+        return redirect('/feed.html');
     }
 
     /**
