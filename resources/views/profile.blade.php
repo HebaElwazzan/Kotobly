@@ -252,7 +252,7 @@ transform: scale(1.1);
         <body>
             <div id="top_bar">
                 <div style="width: 800px; margin: auto;font-size: 30px; font-family:'Fredoka One', cursive;">
-                    Kotobly
+                    <a href="/feed.html/{{$user[0]->id}}">Kotobly</a>
                 </div>
 
                 <div style="justify-content: center;">
