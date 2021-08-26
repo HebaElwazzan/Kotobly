@@ -12,20 +12,22 @@
 
     <div class="container">
 
-        <div class="sidebar">
-            <header>Kotobly</header>
-         <ul>
-             <li><a href="#">Search</a></li>
-             <li><a href="/profile.html/{{$id}}">My profile</a></li>
-             <li><a href="/addbook.html/{{$id}}">Post</a></li>
-             <li><a href="/login.html">Log out</a></li>
-         </ul>
-        </div>
+        @include('layouts.sidebar')
 
 
         <div class="add-book feed">
             <h1>Add a book to your collection</h1>
-            <form action="feed"></form>
+            <div class="add-book">
+                <form action="feed" method="GET">
+                    <input type="text" id="title" name="title" placeholder="Title">
+                    <input type="text" id="author" name="author" placeholder="Author">
+                    <input type="text" id="description" name="description" placeholder="Description">
+                    <p>Add an image</p>
+                    <input type="file" id="image" name="image">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+
         </div>
 
 

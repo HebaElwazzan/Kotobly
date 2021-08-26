@@ -287,8 +287,45 @@ background-color: rgba(0, 0, 0, 0.603);
 
 .add-book {
     text-align: center;
+    margin: 10px;
 }
-
+.add-book input{
+    display: block;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 200px;
+    color: white;
+    font-size: 16px;
+    transform: translate(100%,100%);
+}
+.add-book input[type='file'] {
+    border-bottom: none;
+    width: 400px;
+    transform: translate(50%, 20%);
+}
+.add-book p {
+    color: bisque;
+    display: block;
+    transform: translate(-10%, 100%);
+    font: 20px;
+}
+.add-book input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: rgb(204, 85, 38);
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.add-book input[type="submit"]:hover{
+    cursor: pointer;
+    background:  rgba(204, 85, 38, 0.863);
+}
 .add-book h1 {
     font-size: 50px;
 }
