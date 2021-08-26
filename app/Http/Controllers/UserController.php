@@ -113,4 +113,8 @@ class UserController extends Controller
             return redirect('/login.html')->with('error', 'Invalid username or password');
         }
     }
+
+    public function addbook($id) {
+        return view('addbook', ['id' => $id]);
+    }
 }

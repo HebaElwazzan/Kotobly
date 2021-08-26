@@ -26,3 +26,4 @@ Route::post('/login.html', 'App\Http\Controllers\UserController@check');
 Route::get('/profile.html', 'App\Http\Controllers\UserController@profile');
 Route::post('/profile.html', 'App\Http\Controllers\CarsController@store');
 Route::get('/profile.html/{id}', 'App\Http\Controllers\UserController@profileid');
+Route::get('/addbook.html/{id}', 'App\Http\Controllers\UserController@addbook');

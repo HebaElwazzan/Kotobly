@@ -3,8 +3,10 @@
 @section('content')
     <main>
      <div class="registerBox">
-         <form action="/register.html" method="POST">
+         <form action="/register.html" method="POST" enctype="multipart/form-data">
             @csrf
+             <p>Profile Picture</p>
+             <input type="file" name="image" id="image">
              <p>Name</p>
              <input type="text" name="name" id="name" placeholder="Enter Name">
              <p>Email</p>
