@@ -278,3 +278,9 @@ background-color: rgba(0, 0, 0, 0.603);
     transition: 0.5s;
 }
 
+.error-msg{
+    font-size: 15px;
+    color: rgb(204, 85, 38);
+    margin-bottom: 5px;
+}
+

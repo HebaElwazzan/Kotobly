@@ -17,9 +17,7 @@
          <ul>
              <li><a href="#">Search</a></li>
              <li><a href="/profile.html/{{$id}}">My profile</a></li>
-             <li><a href="#">Home</a></li>
-             <li><a href="/about.html">About</a></li>
-             <li><a href="/contact.html">Contact</a></li>
+             <li><a href="#">Post</a></li>
              <li><a href="/login.html">Logout</a></li>
          </ul>
         </div>

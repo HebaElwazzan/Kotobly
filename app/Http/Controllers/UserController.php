@@ -61,6 +61,7 @@ class UserController extends Controller
         $user->user_type = 'member';
         $user->save();
 
+        // TODO: make it feed/id
         return redirect('/feed.html');
     }
 
@@ -83,6 +84,9 @@ class UserController extends Controller
         $username = request('username');
         $password = request('password');
 
+        // error_log($username);
+        // error_log($password);
+
         // $conn = mysqli_connect('localhost', 'rmz', '1234', 'kotoblys');
 
         // if(!$conn){
@@ -97,15 +101,16 @@ class UserController extends Controller
         // mysqli_free_result($result);
         // mysqli_close($conn);
 
-        $user = User::where('username', $username)->where('password', $password)->get();
+        $id = User::where('username', $username)->where('password', $password)->value('id');
+        // error_log($id);
 
-
-        if($user){
-            return redirect('/feed.html/{$user->id}');
+        if($id){
+            // echo $id;
+            return view('feed', ['id' => $id]);
         }
         else{
             echo 'username or password incorrect';
-            return redirect('/login.html');
+            return redirect('/login.html')->with('error', 'Invalid username or password');
         }
     }
 }

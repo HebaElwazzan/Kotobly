@@ -4,6 +4,7 @@
     <main>
      <div class="loginBox">
          <form action="/login.html" method="POST">
+            <p class="error-msg">{{session('error')}}</p>
             @csrf
              <p>Username</p>
              <input type="text" name="username" id="username" placeholder="Enter Username">
