@@ -104,6 +104,7 @@ class UserController extends Controller
             return redirect('/feed.html/{$user->id}');
         }
         else{
+            echo 'username or password incorrect';
             return redirect('/login.html');
         }
     }
