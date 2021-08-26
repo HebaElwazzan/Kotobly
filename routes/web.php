@@ -21,6 +21,7 @@ Route::get('/contact.html', 'App\Http\Controllers\UserController@contact');
 Route::get('/register.html', 'App\Http\Controllers\UserController@register');
 Route::get('/feed.html', 'App\Http\Controllers\UserController@feed');
 Route::get('/feed.html/{id}', 'App\Http\Controllers\UserController@feedid');
+Route::post('/feed.html', 'App\Http\Controllers\UserController@check');
 Route::post('/register.html', 'App\Http\Controllers\UserController@store');
 Route::post('/login.html', 'App\Http\Controllers\UserController@check');
 Route::get('/profile.html', 'App\Http\Controllers\UserController@profile');

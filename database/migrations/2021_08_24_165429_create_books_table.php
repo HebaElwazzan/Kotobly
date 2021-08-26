@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->foreign('added_by')->references('id')->on('users');
             $table->string('genre');
             $table->longText('description');
-            $table->string('image_path');
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }

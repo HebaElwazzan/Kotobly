@@ -285,3 +285,11 @@ background-color: rgba(0, 0, 0, 0.603);
     margin-bottom: 5px;
 }
 
+.add-book {
+    text-align: center;
+}
+
+.add-book h1 {
+    font-size: 50px;
+}
+

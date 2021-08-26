@@ -264,7 +264,7 @@ transform: scale(1.1);
                     <div class="box">
                         <form action="/profile.html" method="POST" enctype="multipart/form-data">
                             @csrf
-                        <img id="set" src="\img\user.jpg">
+                        <img id="set" src="{{$user[0]->image_path}}">
                         {{-- {{ asset('image/' . $user->image_path) }} --}}
                         <input id="Change_profile_pic" type="file" class="my_file" name="image">
                         <label for="Change_profile_pic">Edit pic</label>

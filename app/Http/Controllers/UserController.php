@@ -43,7 +43,7 @@ class UserController extends Controller
             'phone_number' => 'required|unique:users,phone_number',
             'username' => 'required|unique:users,username',
             'password' => 'required',
-            'image'=>'required|mimes:jpg,png,jpeg|max:5048'
+            'image'=>'mimes:jpg,png,jpeg|max:5048'
         ]);
 
         $user = new User();
@@ -54,15 +54,20 @@ class UserController extends Controller
         $user->username = request('username');
         $user->password = request('password');
 
-        $newImageName = $request->username . '.' . $request->image->extension();
-        $request->image->move(public_path('images'), $newImageName);
-        $user->image_path = $newImageName;
+        if($request->image) {
+            $newImageName = $request->username . '.' . $request->image->extension();
+            $request->image->move(public_path('images'), $newImageName);
+            $user->image_path = $newImageName;
+        }
+        else {
+            $user->image_path = '\img\user.jpg';
+        }
 
         $user->user_type = 'member';
         $user->save();
 
         // TODO: make it feed/id
-        return redirect('/feed.html');
+        return view('feed', ['id' => $user->id]);
     }
 
     public function profile(){

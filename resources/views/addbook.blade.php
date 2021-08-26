@@ -17,14 +17,15 @@
          <ul>
              <li><a href="#">Search</a></li>
              <li><a href="/profile.html/{{$id}}">My profile</a></li>
-             <li><a href="#">Post</a></li>
-             <li><a href="/login.html">Logout</a></li>
+             <li><a href="/addbook.html/{{$id}}">Post</a></li>
+             <li><a href="/login.html">Log out</a></li>
          </ul>
         </div>
 
 
-        <div class="feed">
-
+        <div class="add-book feed">
+            <h1>Add a book to your collection</h1>
+            <form action="feed"></form>
         </div>
 
 
